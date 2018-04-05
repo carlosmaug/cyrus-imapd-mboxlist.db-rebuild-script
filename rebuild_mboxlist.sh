@@ -11,7 +11,7 @@ echo -e "building new mailboxes.db flat file..\n"
 find /var/spool/imap/?/user -maxdepth 1 -mindepth 1 | \
   while read i; do
     k=$(basename $i)
-    echo -e "user.$k\tdefault\t$k\tlrswipcda\timap_user\tlrswipcda" >> /tmp/mboxflat.txt
+    echo -e "user.$k\tdefault\t$k\tlrswipcda\tcyrus\tlrswipcda" >> /tmp/mboxflat.txt
   done
 
 echo -e "importing mailboxes flat file in new mailboxes.db..\n"
