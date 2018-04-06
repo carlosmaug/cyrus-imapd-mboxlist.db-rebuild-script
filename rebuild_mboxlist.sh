@@ -15,7 +15,7 @@ find /var/spool/imap/?/user -maxdepth 1 -mindepth 1 | \
   done
 
 echo -e "importing mailboxes flat file in new mailboxes.db..\n"
-/usr/lib/cyrus-imapd/ctl_mboxlist -u </tmp/newmboxlist.txt
+/usr/lib/cyrus-imapd/ctl_mboxlist -u </tmp/mboxflat.txt
 rm -f /tmp/mboxflat.txt
 echo -e "starting reconstruct\n"
 
